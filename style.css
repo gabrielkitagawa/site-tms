@@ -2048,3 +2048,12 @@ svg.i {
     transition: none !important;
   }
 }
+/* ===================== LOGO E ÍCONE DO WHATSAPP ===================== */
+.brand-logo { display: block; width: auto; height: auto; max-width: 170px; max-height: 54px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(62, 198, 255, 0.25)); }
+.mobile-header .brand-logo { max-width: 130px; max-height: 36px; }
+
+.wa-ico { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; display: block; }
+.btn-cyan .wa-ico, .btn-whats .wa-ico { width: 22px; height: 22px; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)); }
+.guide .doc.wa, .tech-card .ico.wa { background: rgba(37, 211, 102, 0.12); border-color: rgba(37, 211, 102, 0.4); }
+.tech-card .ico.wa .wa-ico { width: 26px; height: 26px; }
+.channel .ico.wa .wa-ico { width: 24px; height: 24px; }
