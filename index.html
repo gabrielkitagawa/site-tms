@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TMS Contabilidade</title>
+  <meta name="description"
+    content="Contabilidade em Ribeirão Preto e para todo o Brasil: conhecimento técnico, tecnologia e atendimento de perto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER MOBILE -->
+  <header class="mobile-header">
+    <a href="#inicio" class="brand" aria-label="TMS Contabilidade, início">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="brand-text"><b>TMS</b></span>
+    </a>
+    <button class="hamburger-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"
+      aria-controls="sidebar"><span></span><span></span><span></span></button>
+  </header>
+  <div class="sidebar-overlay" id="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="app-sidebar" id="sidebar">
+    <div>
+      <a href="#inicio" class="brand" aria-label="TMS Contabilidade, início">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="brand-text"><b>TMS</b><span>Contabilidade</span></span>
+      </a>
+      <nav class="sidebar-nav" aria-label="Principal">
+        <a href="#inicio" class="nav-item active" data-section="inicio">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <path d="M9 22V12h6v10" />
+          </svg>Início
+        </a>
+        <div class="nav-group">Nossos pilares</div>
+        <a href="#conhecimento" class="nav-item" data-section="conhecimento">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M2 7l10-4 10 4-10 4z" />
+            <path d="M6 9v5c0 1.7 2.7 3 6 3s6-1.3 6-3V9" />
+          </svg>Conhecimento<span class="nav-num">1</span>
+        </a>
+        <a href="#tecnologia" class="nav-item" data-section="tecnologia">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <rect x="9" y="9" width="6" height="6" />
+            <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" />
+          </svg>Tecnologia<span class="nav-num">2</span>
+        </a>
+        <a href="#atendimento" class="nav-item" data-section="atendimento">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
+          </svg>Atendimento<span class="nav-num">3</span>
+        </a>
+        <div class="nav-group">A TMS</div>
+        <a href="#servicos" class="nav-item" data-section="servicos">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+          </svg>Serviços
+        </a>
+        <a href="#escritorio" class="nav-item" data-section="escritorio">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />
+          </svg>Escritório
+        </a>
+        <a href="#contato" class="nav-item" data-section="contato">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>Contato
+        </a>
+      </nav>
+    </div>
+    <div class="sidebar-footer">
+      <a href="https://auth.thomsonreuters.com/u/login/identifier?ui_locales=pt-BR" target="_blank"
+        rel="noopener noreferrer" class="btn-portal">
+        <svg class="i" viewBox="0 0 24 24" aria-hidden="true" style="width:17px;height:17px">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3" />
+        </svg>Portal do Cliente
+      </a>
+      <a href="https://wa.me/5516981296131?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20TMS%20Contabilidade%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener noreferrer" class="btn-whats">Falar no
+        WhatsApp</a>
+      <div class="sidebar-hours">7h30 às 17h30<br>Segunda a sexta</div>
+    </div>
+  </aside>
+
+  <main class="main-wrap">
+
+    <!-- HERO -->
+    <section class="hero-section spy" id="inicio">
+      <div class="hero-bg" id="heroBg">
+        <svg class="circuit-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path class="circuit-line" d="M100,150 L350,150 L450,250 L850,250 L950,150 L1350,150" />
+          <path class="circuit-line" d="M200,450 L400,450 L520,320 L920,320 L1040,450 L1400,450" />
+          <path class="circuit-line" d="M50,700 L300,700 L420,580 L780,580 L880,680 L1300,680" />
+          <path class="circuit-line" d="M450,250 L450,480 L580,610 L1150,610" />
+          <path class="circuit-line" d="M850,250 L850,420 L950,520 L1250,520" />
+          <circle class="circuit-node" cx="350" cy="150" r="5" />
+          <circle class="circuit-node" cx="850" cy="250" r="5" style="animation-delay:.6s" />
+          <circle class="circuit-node" cx="520" cy="320" r="5" style="animation-delay:1.2s" />
+          <circle class="circuit-node" cx="920" cy="320" r="5" style="animation-delay:1.8s" />
+          <circle class="circuit-node" cx="420" cy="580" r="5" style="animation-delay:.9s" />
+          <circle class="circuit-node" cx="880" cy="680" r="5" style="animation-delay:1.5s" />
+          <circle class="circuit-node" cx="1040" cy="450" r="5" style="animation-delay:2.1s" />
+        </svg>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-intro" id="heroText">
+          <div class="pill-badge"><span class="dot-pulse"></span>Ribeirão Preto · todo o Brasil</div>
+          <h1 class="hero-title">Contabilidade feita por quem entende de <span class="grad">números e de gente</span>.
+          </h1>
+          <p class="hero-sub">Há 15 anos cuidamos da contabilidade de mais de 450 empresas. Você escolhe como ser
+            atendido: no escritório, por telefone, pelo WhatsApp ou online, de qualquer estado.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5516981296131?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20TMS%20Contabilidade%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener noreferrer" class="btn-cyan">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" />
+              </svg>
+              Quero uma proposta
+            </a>
+            <a href="#atendimento" class="btn-glass">Como trabalhamos
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="glass-card" aria-label="Ilustração do Portal do Cliente">
+          <div class="glass-head">
+            <span class="t"><span class="dot-pulse" style="width:6px;height:6px"></span><b>Portal do Cliente</b></span>
+            <!-- <span class="tag-ilustra">Ilustração</span> -->
+          </div>
+
+          <div class="guide">
+            <span class="doc"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3" />
+              </svg></span>
+            <div><b>Guias e documentos</b><span>Impostos, folha e relatórios do mês</span></div>
+            <span class="status info">Todo mês</span>
+          </div>
+
+          <div class="guide">
+            <span class="doc"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" />
+              </svg></span>
+            <div><b>Mensagens pelo WhatsApp</b><span>Converse direto com cada departamento</span></div>
+            <span class="status ok">Direto com a equipe</span>
+          </div>
+
+          <div class="guide">
+            <span class="doc"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 11l3 3 8-8" />
+                <path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9" />
+              </svg></span>
+            <div><b>Solicitações de serviço</b><span>Peça e acompanhe cada etapa</span></div>
+            <span class="status new">Passo a passo</span>
+          </div>
+
+          <div class="guide">
+            <span class="doc"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 11l18-8v18L3 13z" />
+                <path d="M7 12v5a2 2 0 0 0 4 0v-3" />
+              </svg></span>
+            <div><b>Comunicados</b><span>Avisos e prazos</span></div>
+            <span class="status ok">E-mail e WhatsApp</span>
+          </div>
+          <div class="glass-foot"><span>Tudo da sua empresa num só lugar</span><b>Onvio</b></div>
+        </div>
+      </div><!-- fecha .hero-grid -->
+
+      <div class="pillars-block">
+        <div class="pillars-head">
+          <span class="pillars-eyebrow">Por que a TMS</span>
+          <h2 class="pillars-title">Nossos <span class="grad">3 pilares</span></h2>
+        </div>
+        <nav class="pillar-strip" aria-label="Os 3 pilares da TMS">
+          <a class="pillar-link" href="#conhecimento">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 7l10-4 10 4-10 4z" />
+                <path d="M6 9v5c0 1.7 2.7 3 6 3s6-1.3 6-3V9" />
+              </svg></span>
+            <span><b>Conhecimento Técnico</b><small>Sempre atualizados com as normas</small></span>
+          </a>
+          <a class="pillar-link" href="#tecnologia">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" />
+              </svg></span>
+            <span><b>Tecnologia</b><small>Atendimento híbrido, de onde você estiver</small></span>
+          </a>
+          <a class="pillar-link" href="#atendimento">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
+                <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+              </svg></span>
+            <span><b>Atendimento</b><small>Excelência e foco no seu resultado</small></span>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- CONTADORES -->
+    <section class="counters band" aria-label="A TMS em números">
+      <div class="wrap counters-grid" id="counters">
+        <div class="counter-card">
+          <div class="counter-num"><span class="count" data-target="450" style="color:inherit">450</span><span>+</span>
+          </div>
+          <div class="counter-label">Clientes atendidos</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num"><span class="count" data-target="15" style="color:inherit">15</span><span>
+              anos</span></div>
+          <div class="counter-label">De mercado</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num"><span class="count" data-target="500" style="color:inherit">500</span><span>+</span>
+          </div>
+          <div class="counter-label">Contratos</div>
+        </div>
+        <div class="counter-card">
+          <div class="counter-num"><span class="count" data-target="4" style="color:inherit">4</span><span>
+              canais</span></div>
+          <div class="counter-label">Presencial, telefone, WhatsApp e online</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 · CONHECIMENTO TÉCNICO -->
+    <section class="band light spy" id="conhecimento">
+      <div class="wrap knowledge-grid">
+        <div class="founder-card">
+          <div class="placeholder">
+            <div>
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+              </svg>
+              <strong>Foto do Tiago de Melo Saccuman</strong>Espaço reservado
+            </div>
+          </div>
+          <div>
+            <p class="founder-name">Tiago de Melo Saccuman</p>
+            <p class="founder-role">À frente da TMS Contabilidade · [cargo e CRC]</p>
+          </div>
+          <div class="founder-quote">
+            <span class="q" aria-hidden="true">“</span>
+            <p>Unimos a tradição de um escritório que atende com proximidade às tecnologias que deixam o atendimento
+              ágil. Acreditamos no equilíbrio entre tecnologia e humanização.</p>
+          </div>
+        </div>
+        <div class="knowledge-copy">
+          <div class="section-head">
+            <span class="section-tag"><b>1</b>Conhecimento Técnico</span>
+            <h2 class="section-title">Estamos sempre atualizados com as normas vigentes, para você decidir com
+              segurança.</h2>
+            <p class="section-desc">A legislação muda o tempo todo. Nosso trabalho é acompanhar essas mudanças e
+              traduzir o que elas significam para a sua empresa, antes que virem problema.</p>
+          </div>
+          <div class="tilt-grid">
+            <div class="tilt-card">
+              <span class="icon-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg></span>
+              <h3>Planejamento Tributário</h3>
+              <p>Estratégias legais para reduzir os encargos fiscais da sua empresa.</p>
+            </div>
+            <div class="tilt-card">
+              <span class="icon-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+                </svg></span>
+              <h3>Assessoria de Importações</h3>
+              <p>Suporte contábil e fiscal para empresas que importam.</p>
+            </div>
+            <div class="tilt-card">
+              <span class="icon-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 21h18M5 21V7l7-4 7 4v14" />
+                  <path d="M9 9h1M14 9h1M9 13h1M14 13h1M9 17h1M14 17h1" />
+                </svg></span>
+              <h3>Holding Patrimonial</h3>
+              <p>Organização do patrimônio e planejamento da sucessão familiar.</p>
+            </div>
+            <div class="tilt-card">
+              <span class="icon-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></span>
+              <h3>Terceiro Setor</h3>
+              <p>Contabilidade para ONGs, igrejas, OSCIPs e entidades sem fins lucrativos.</p>
+            </div>
+          </div>
+          <div class="reform">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 9v4M12 17h.01" />
+                <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
+              </svg></span>
+            <div>
+              <h3>Reforma Tributária</h3>
+              <p>A forma de calcular os impostos sobre consumo vai mudar nos próximos anos. Acompanhamos cada etapa da
+                transição e explicamos o que muda para o seu negócio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · TECNOLOGIA -->
+    <section class="band dark spy" id="tecnologia">
+      <div class="ambient-glow"></div>
+      <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="section-tag"><b>2</b>Tecnologia</span>
+          <h2 class="section-title"><span class="gradient-loop">Tudo da sua empresa</span> num só portal, de qualquer
+            lugar.</h2>
+          <p class="section-desc">Usamos tecnologia para o seu dia a dia ficar mais simples: menos papel, menos e-mail
+            perdido, mais agilidade.</p>
+        </div>
+        <div class="tech-cards">
+          <div class="tech-card">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6M9 15l2 2 4-4" />
+              </svg></span>
+            <h3>Portal do Cliente Onvio</h3>
+            <p>Guias, documentos e relatórios postados num só lugar, organizados por mês.</p>
+          </div>
+          <div class="tech-card">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" />
+              </svg></span>
+            <h3>WhatsApp integrado</h3>
+            <p>As conversas ficam registradas e qualquer pessoa do departamento consegue te atender.</p>
+          </div>
+          <div class="tech-card">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg></span>
+            <h3>Sistemas profissionais</h3>
+            <p>Escrituração, folha e impostos no Domínio Web, com rotinas padronizadas e menos chance de erro.</p>
+          </div>
+          <div class="tech-card">
+            <span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" />
+              </svg></span>
+            <h3>Telefonia digital</h3>
+            <p>Ligue para o escritório e fale direto com o departamento certo.</p>
+          </div>
+        </div>
+
+        <div class="terminal-wrap" id="terminalWrap">
+          <span class="terminal-pill"><i></i>A rotina do mês</span>
+          <div class="terminal">
+            <div class="terminal-bar"><span class="dots"><i></i><i></i><i></i></span><span>tms@contabilidade:
+                ~</span><span style="width:40px"></span></div>
+            <div class="terminal-body" id="terminalBody" aria-live="off"></div>
+          </div>
+          <p class="terminal-note">Ilustração de como cuidamos das obrigações da sua empresa todo mês.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ATENDIMENTO -->
+    <section class="band light spy" id="atendimento">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag"><b>3</b>Atendimento</span>
+          <h2 class="section-title">Atendimento focado em excelência e no seu resultado.</h2>
+          <p class="section-desc">A maior parte dos nossos clientes chega por indicação de quem já é atendido pela TMS.
+            É assim que funciona, do primeiro contato ao dia a dia:</p>
+        </div>
+        <ol class="journey">
+          <li class="tilt-card">
+            <h3>Primeira conversa</h3>
+            <p>Você nos conta sobre a sua empresa, no escritório, por telefone ou online.</p>
+          </li>
+          <li class="tilt-card">
+            <h3>Diagnóstico</h3>
+            <p>Entendemos o que a sua empresa precisa hoje e para onde ela quer ir.</p>
+          </li>
+          <li class="tilt-card">
+            <h3>Plano ideal</h3>
+            <p>Indicamos o regime e o plano que fazem sentido para o seu negócio.</p>
+
+          </li>
+          <li class="tilt-card">
+            <h3>Proposta</h3>
+            <p>Você recebe uma proposta clara, com tudo o que está incluído.</p>
+          </li>
+          <li class="tilt-card">
+            <h3>Reunião de boas-vindas</h3>
+            <p>Presencial ou online, explicamos como trabalham os departamentos Contábil, Fiscal e Pessoal.</p>
+          </li>
+          <li class="tilt-card">
+            <h3>Dia a dia</h3>
+            <p>Guias no portal, conversa pelo WhatsApp e uma equipe que conhece a sua empresa.</p>
+          </li>
+        </ol>
+
+        <div class="sub-head">
+          <h3>Fale com a gente do jeito que preferir</h3>
+        </div>
+        <div class="channels">
+          <div class="channel"><span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg></span>
+            <h4>Presencial</h4>
+            <p>No escritório, em Ribeirão Preto.</p>
+          </div>
+          <div class="channel"><span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" />
+              </svg></span>
+            <h4>Telefone</h4>
+            <p class="value">(16) 4102-0025</p>
+          </div>
+          <div class="channel"><span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z" />
+              </svg></span>
+            <h4>WhatsApp</h4>
+            <p class="value">(16) 98129-6131</p>
+          </div>
+          <div class="channel"><span class="ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m23 7-7 5 7 5z" />
+                <rect x="1" y="5" width="15" height="14" rx="2" />
+              </svg></span>
+            <h4>Online</h4>
+            <p>Reuniões por vídeo para clientes de qualquer estado.</p>
+          </div>
+        </div>
+
+        <div class="sub-head">
+          <h3>O que dizem nossos clientes</h3>
+          <div class="reviews-actions">
+            <a class="reviews-link"
+              href="https://www.google.com/search?q=google+tms+contabilidade&rlz=1C1GCEA_enBR1189BR1190&oq=google+tms+contabilidade+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMg
+                                          YIAhBFGDzSAQg0Njc4ajBqN6gCALACAA&sourceid=chrome&source=chrome.ob&ie=UTF-8#lrd=0x94b9be603beb5a41:0x92ff954aaf9536ea,1,,,,"
+              target="_blank" rel="noopener noreferrer">Ver
+              todas no Google →</a>
+            <div class="carousel-ctrl">
+              <button type="button" id="revPrev" aria-label="Depoimento anterior"><svg class="i" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="m15 18-6-6 6-6" />
+                </svg></button>
+              <button type="button" id="revNext" aria-label="Próximo depoimento"><svg class="i" viewBox="0 0 24 24"
+                  aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="marquee" aria-label="Depoimentos de clientes no Google">
+          <div class="marquee-track" id="reviewsTrack"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="band dark spy" id="servicos">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="section-tag">Hub de serviços</span>
+          <h2 class="section-title">Tudo o que a sua empresa precisa, <span class="gradient-loop">num só
+              escritório</span>.</h2>
+          <p class="section-desc">Escolha uma categoria para filtrar.</p>
+        </div>
+        <div class="chips" id="chips" role="group" aria-label="Filtrar serviços"></div>
+        <div class="services-grid" id="services"></div>
+        <div class="services-foot">
+          <p>Não encontrou o que procura? Conte o que você precisa.</p>
+          <a class="btn-cyan" href="https://wa.me/5516981296131?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20TMS%20Contabilidade%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener noreferrer">Falar com um
+            especialista</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCRITÓRIO -->
+    <section class="band light spy" id="escritorio">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-tag">Nosso escritório</span>
+          <h2 class="section-title">Venha tomar um café com a gente em Ribeirão Preto.</h2>
+          <p class="section-desc">R. Prof. Mariano Siqueira, 48, Jardim América.</p>
+        </div>
+        <div class="gallery">
+          <div class="placeholder">
+            <div><strong>Foto do escritório</strong>Espaço reservado</div>
+          </div>
+          <div class="placeholder">
+            <div><strong>Foto do escritório</strong>Espaço reservado</div>
+          </div>
+          <div class="placeholder">
+            <div><strong>Foto do escritório</strong>Espaço reservado</div>
+          </div>
+          <div class="placeholder">
+            <div><strong>Foto do escritório</strong>Espaço reservado</div>
+          </div>
+          <div class="placeholder">
+            <div><strong>Foto do escritório</strong>Espaço reservado</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="band cta-section spy" id="contato">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 class="cta-title">Vamos encontrar o <span>plano certo</span> para a sua empresa.</h2>
+          <p class="cta-text">Abra ou regularize sua empresa de forma rápida e descomplicada, de qualquer lugar do
+            Brasil.</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5516986131129?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20TMS%20Contabilidade%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener noreferrer" class="btn-cyan">Quero uma
+              proposta</a>
+            <a href="https://auth.thomsonreuters.com/u/login/identifier?ui_locales=pt-BR" target="_blank"
+              rel="noopener noreferrer" class="btn-glass">Portal do Cliente</a>
+          </div>
+        </div>
+        <dl class="contact-list">
+          <div class="contact-row">
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/5516986131129?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20TMS%20Contabilidade%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener noreferrer">(16) 98613-1129</a></dd>
+          </div>
+          <div class="contact-row">
+            <dt>Telefone</dt>
+            <dd>(16) 4102-0025</dd>
+          </div>
+          <div class="contact-row">
+            <dt>E-mail</dt>
+            <dd>comercial@tmscontabil.com.br</dd>
+          </div>
+          <div class="contact-row">
+            <dt>Endereço</dt>
+            <dd>R. Prof. Mariano Siqueira, 48<small>Jardim América, Ribeirão Preto/SP · 14020-188 · <a
+                  href="https://www.google.com/maps/search/?api=1&amp;query=R.%20Prof.%20Mariano%20Siqueira%2C%2048%2C%20Ribeir%C3%A3o%20Preto%20SP"
+                  target="_blank" rel="noopener noreferrer">Ver no mapa</a></small></dd>
+          </div>
+          <div class="contact-row">
+            <dt>Horário</dt>
+            <div class="sidebar-hours">Seg. a sex. · 7h30 às 17h30</div>
+          </div>
+          <div class="contact-row">
+            <dt>Instagram</dt>
+            <dd><a href="https://www.instagram.com/tiagomelo_tms/" target="_blank"
+                rel="noopener noreferrer">@tiagomelo_tms</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <div class="footer-row">
+        <span>CNPJ e CRC: [preencher]</span>
+        <span>© <span id="year">2026</span> TMS Contabilidade. Todos os direitos reservados.</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
