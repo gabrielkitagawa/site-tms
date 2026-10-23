@@ -80,16 +80,6 @@ svg.i {
   flex-shrink: 0;
 }
 
-.logo-mark {
-  display: inline-block;
-  width: 46px;
-  aspect-ratio: 240 / 91;
-  background: currentColor;
-  flex-shrink: 0;
-  -webkit-mask: url(simbolo.png) center / contain no-repeat;
-  mask: url(simbolo.png) center / contain no-repeat;
-}
-
 /* ===================== SIDEBAR ===================== */
 .app-sidebar {
   position: fixed;
@@ -107,41 +97,6 @@ svg.i {
   padding: calc(1.1rem + env(safe-area-inset-top, 0px)) 0.9rem calc(1rem + env(safe-area-inset-bottom, 0px)) calc(0.9rem + env(safe-area-inset-left, 0px));
   overflow-y: auto;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  text-decoration: none;
-  padding: 0.2rem 0.75rem;
-  color: var(--cyan);
-}
-
-.brand .logo-mark {
-  width: 40px;
-  filter: drop-shadow(0 0 6px var(--cyan-glow));
-}
-
-.brand-text {
-  display: grid;
-  line-height: 1;
-}
-
-.brand-text b {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--white);
-}
-
-.brand-text span {
-  font-size: 0.55rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  color: var(--text-muted);
-  margin-top: 4px;
-  text-transform: uppercase;
 }
 
 .sidebar-nav {
@@ -273,6 +228,80 @@ svg.i {
   line-height: 1.4;
 }
 
+/* ===================== MARCA ===================== */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.brand-logo {
+  display: block;
+  width: 44px;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px var(--cyan-glow));
+}
+
+.brand-text {
+  display: grid;
+  line-height: 1;
+}
+
+.brand-text b {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--white);
+}
+
+.brand-text span {
+  margin-top: 0.4rem;
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Sidebar: asas em cima, nome centralizado embaixo */
+.brand-stack {
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.5rem 0.5rem 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-stack .brand-logo {
+  width: 100px;
+}
+
+.brand-stack .brand-text {
+  justify-items: center;
+  text-align: center;
+}
+
+.brand-stack .brand-text b {
+  font-size: 1.5rem;
+  letter-spacing: 0.24em;
+  padding-left: 0.24em;
+}
+
+.brand-stack .brand-text span {
+  padding-left: 0.32em;
+}
+
+/* Topo do celular: asas e "TMS" lado a lado */
+.mobile-header .brand-logo {
+  width: 40px;
+}
+
+.mobile-header .brand-text b {
+  font-size: 1.15rem;
+}
+
 /* Telas baixas: esconde os títulos dos grupos e o horário para não aparecer rolagem */
 @media (min-width: 769px) and (max-height: 640px) {
 
@@ -315,10 +344,6 @@ svg.i {
 
 .mobile-header .brand {
   padding: 0;
-}
-
-.mobile-header .brand-text b {
-  font-size: 1.3rem;
 }
 
 .hamburger-btn {
@@ -2049,9 +2074,6 @@ svg.i {
   }
 }
 /* ===================== LOGO E ÍCONE DO WHATSAPP ===================== */
-.brand-logo { display: block; width: auto; height: auto; max-width: 170px; max-height: 54px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(62, 198, 255, 0.25)); }
-.mobile-header .brand-logo { max-width: 130px; max-height: 36px; }
-
 .wa-ico { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; display: block; }
 .btn-cyan .wa-ico, .btn-whats .wa-ico { width: 22px; height: 22px; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)); }
 .guide .doc.wa, .tech-card .ico.wa { background: rgba(37, 211, 102, 0.12); border-color: rgba(37, 211, 102, 0.4); }
