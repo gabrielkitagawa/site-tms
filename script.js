@@ -14,19 +14,6 @@ const SERVICOS = [
   { nome: 'Contabilidade para o Terceiro Setor', categoria: 'Atendimento especializado', descricao: 'Contabilidade para ONGs, igrejas, OSCIPs e entidades sem fins lucrativos.' }
 ];
 
-/* Rotina do mês mostrada no terminal (ilustração, em linguagem simples) */
-const ROTINA = [
-  { t: 'cmd', x: 'tms --rotina-do-mes' },
-  { t: 'out', x: '> conferindo notas fiscais e extratos... ', h: 'ok' },
-  { t: 'out', x: '> apurando impostos da empresa... ', h: 'ok' },
-  { t: 'ok', x: '> guias postadas no Portal do Cliente ✓' },
-  { t: 'cmd', x: 'tms --folha-de-pagamento' },
-  { t: 'out', x: '> holerites, férias e FGTS conferidos... ', h: 'ok' },
-  { t: 'ok', x: '> folha enviada para aprovação ✓' },
-  { t: 'cmd', x: 'tms --atendimento' },
-  { t: 'ok', x: '> dúvida respondida pelo WhatsApp ✓' }
-];
-
 /* Depoimentos do Google: copie os textos e nomes como aparecem no Google */
 const DEPOIMENTOS = [
   { nome: 'Reginaldo Júnior', estrelas: 5, texto: 'Empresa composta por uma equipe extremamente competente e preparada para atender os clientes da melhor forma e proporcionar uma experiência de acolhimento, sempre buscando entender a dor do empresário e minimizando as complexidades do dia a dia. Super recomendo!!!' },
@@ -52,7 +39,6 @@ const DEPOIMENTOS = [
 document.addEventListener('DOMContentLoaded', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
   /* 1. Menu lateral no celular */
   const sidebar = document.getElementById('sidebar');
@@ -112,76 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       card.addEventListener('mouseleave', () => { card.style.transform = ''; card.style.boxShadow = ''; });
     });
-  }
-
-  /* 6. Partículas da seção Tecnologia: só animam quando a seção está visível */
-  const canvas = document.getElementById('particles');
-  const ctx = canvas.getContext('2d');
-  let W = 0, H = 0, particlesOn = false;
-  const resize = () => { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; };
-  resize();
-  window.addEventListener('resize', resize);
-  const parts = Array.from({ length: 22 }, () => ({ x: Math.random() * W, y: Math.random() * H, r: Math.random() * 2 + 1, vy: Math.random() * 0.6 + 0.3, vx: (Math.random() - 0.5) * 0.3, a: Math.random() * 0.5 + 0.25 }));
-  function draw() {
-    if (!particlesOn) return;
-    ctx.clearRect(0, 0, W, H);
-    parts.forEach((p) => {
-      p.y -= p.vy; p.x += p.vx;
-      if (p.y < -10) { p.y = H + 10; p.x = Math.random() * W; }
-      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 2.2, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(62, 198, 255, ${p.a * 0.18})`; ctx.fill();
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(62, 198, 255, ${p.a})`; ctx.fill();
-    });
-    requestAnimationFrame(draw);
-  }
-  if (!reduceMotion) {
-    new IntersectionObserver(([e]) => {
-      const was = particlesOn; particlesOn = e.isIntersecting;
-      if (particlesOn && !was) requestAnimationFrame(draw);
-    }).observe(document.getElementById('tecnologia'));
-  }
-
-  /* 7. Terminal: digita a rotina do mês quando aparece na tela */
-  const term = document.getElementById('terminalBody');
-  let sessao = 0, termVisivel = false;
-  function linhaPronta(item) {
-    const d = document.createElement('div');
-    d.className = 'term-line ' + (item.t === 'cmd' ? '' : item.t === 'ok' ? 'term-ok' : 'term-out');
-    if (item.t === 'cmd') { d.innerHTML = '<span class="term-cmd">$ </span>'; d.append(item.x); }
-    else { d.textContent = item.x; if (item.h) { const g = document.createElement('span'); g.className = 'term-gold'; g.textContent = item.h; d.append(g); } }
-    return d;
-  }
-  function mostrarTudo() { term.replaceChildren(...ROTINA.map(linhaPronta)); }
-  async function rodar() {
-    const id = ++sessao;
-    term.replaceChildren();
-    for (const item of ROTINA) {
-      if (id !== sessao || !termVisivel) return;
-      if (item.t === 'cmd') {
-        const d = document.createElement('div'); d.className = 'term-line';
-        d.innerHTML = '<span class="term-cmd">$ </span><span></span><span class="term-cursor">▮</span>';
-        term.append(d);
-        const alvo = d.children[1];
-        for (const ch of item.x) { if (id !== sessao || !termVisivel) return; alvo.textContent += ch; term.scrollTop = term.scrollHeight; await sleep(32); }
-        d.lastChild.remove();
-      } else {
-        term.append(linhaPronta(item));
-      }
-      await sleep(520);
-      term.scrollTop = term.scrollHeight;
-    }
-    const c = document.createElement('span'); c.className = 'term-cursor'; c.textContent = '▮'; term.append(c);
-    await sleep(3500);
-    if (id === sessao && termVisivel) rodar();
-  }
-  mostrarTudo();
-  if (!reduceMotion) {
-    new IntersectionObserver(([e]) => {
-      const was = termVisivel; termVisivel = e.isIntersecting;
-      if (termVisivel && !was) rodar();
-    }, { threshold: 0.3 }).observe(document.getElementById('terminalWrap'));
   }
 
   /* 8. Hub de serviços com filtro fluido */

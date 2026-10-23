@@ -1219,14 +1219,6 @@ svg.i {
   }
 }
 
-.particles {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
-}
 
 .tech-cards {
   display: grid;
@@ -1302,30 +1294,7 @@ svg.i {
   color: var(--white);
 }
 
-.tech-card:hover h3 {
-  animation: glitch 0.4s ease forwards;
-}
 
-@keyframes glitch {
-  20% {
-    text-shadow: -2px 0 var(--cyan), 2px 0 #f43f5e;
-    transform: translate(-1px, 1px);
-  }
-
-  40% {
-    text-shadow: 2px 0 var(--cyan), -2px 0 #f43f5e;
-    transform: translate(1px, -1px);
-  }
-
-  60% {
-    text-shadow: -1px 0 var(--cyan), 1px 0 #f43f5e;
-    transform: translate(0);
-  }
-
-  100% {
-    text-shadow: 0 0 10px var(--cyan);
-  }
-}
 
 .tech-card p {
   font-size: 0.88rem;
@@ -1333,134 +1302,68 @@ svg.i {
   color: var(--text-muted);
 }
 
-.terminal-wrap {
-  max-width: 780px;
+/* Como é o mês: 4 passos em linguagem de cliente */
+.month-flow {
+  max-width: 980px;
   margin: 0 auto;
   display: grid;
-  justify-items: center;
-  gap: 1.1rem;
+  gap: 1.5rem;
 }
 
-.terminal-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: rgba(13, 26, 46, 0.7);
-  border: 1px solid rgba(74, 222, 128, 0.35);
-  border-radius: 999px;
-  padding: 0.4rem 1.1rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--green);
-  text-transform: uppercase;
+.month-title {
+  text-align: center;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  color: var(--white);
 }
 
-.terminal-pill i {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 8px var(--green);
+.month-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
-.terminal {
-  width: 100%;
-  background: #05080f;
-  border: 1px solid rgba(62, 198, 255, 0.3);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 35px rgba(62, 198, 255, 0.15);
+.month-step {
   position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0.85rem;
+  text-align: center;
 }
 
-.terminal::before {
+.month-step .ico {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(62, 198, 255, 0.1);
+  border: 1px solid rgba(62, 198, 255, 0.35);
+  color: var(--cyan);
+}
+
+.month-step .ico svg.i {
+  width: 24px;
+  height: 24px;
+}
+
+.month-step p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-soft);
+  line-height: 1.45;
+  max-width: 18ch;
+}
+
+/* linha ligando um passo ao próximo */
+.month-step:not(:last-child)::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
-  background-size: 100% 2px;
-  pointer-events: none;
-  opacity: 0.5;
-  z-index: 5;
-}
-
-.terminal-bar {
-  background: #0b1424;
-  padding: 0.65rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.terminal-bar .dots {
-  display: flex;
-  gap: 7px;
-}
-
-.terminal-bar .dots i {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-}
-
-.terminal-bar .dots i:nth-child(1) {
-  background: #ff5f56;
-}
-
-.terminal-bar .dots i:nth-child(2) {
-  background: #ffbd2e;
-}
-
-.terminal-bar .dots i:nth-child(3) {
-  background: #27c93f;
-}
-
-.terminal-bar span {
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  color: var(--text-muted);
-}
-
-.terminal-body { padding: 1.4rem; height: 17rem; overflow: hidden; font-family: var(--font-mono); font-size: 0.86rem; line-height: 1.75; color: var(--text-soft); }
-
-.term-line {
-  overflow-wrap: anywhere;
-}
-
-.term-cmd {
-  color: var(--cyan);
-  font-weight: 600;
-}
-
-.term-out {
-  color: var(--text-muted);
-}
-
-.term-ok {
-  color: var(--green);
-  font-weight: 600;
-}
-
-.term-gold {
-  color: var(--gold);
-}
-
-.term-cursor {
-  color: var(--cyan);
-  animation: blink 0.9s infinite;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.terminal-note {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  top: 28px;
+  left: calc(50% + 40px);
+  right: calc(-50% + 40px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(62, 198, 255, 0.5), rgba(62, 198, 255, 0.15));
 }
 
 /* ===================== 3 · ATENDIMENTO ===================== */
@@ -1988,6 +1891,15 @@ svg.i {
     --sidebar-width: 0px;
   }
 
+  .month-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+
+  .month-step::after {
+    display: none;
+  }
+
   .mobile-header {
     display: flex;
   }
@@ -2045,8 +1957,6 @@ svg.i {
     grid-row: auto;
     aspect-ratio: 16 / 10;
   }
-
-.terminal-body { font-size: 0.75rem; padding: 1.1rem; height: 19rem; }
 
   .contact-row {
     grid-template-columns: 1fr;
